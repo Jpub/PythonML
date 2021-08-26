@@ -1,0 +1,1 @@
+docker run -p 8500:8500 -p 8501:8501 --mount type=bind,source="$(pwd)"/serving/yolo3,target=/models/yolo3 --mount type=bind,source="$(pwd)"/tfs_model.config,target=/models/models.config -t tensorflow/serving --model_config_file=/models/models.config
